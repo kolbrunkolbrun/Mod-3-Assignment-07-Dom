@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+
     <div id="game-board"></div>
     <style>
         body {
@@ -17,31 +20,34 @@
             align-items: center;
             margin: 0;
             background-color: black;
+            padding: 1em;
             
         }
 
         #game-board {
             background-color:black;
-            width: 100vmin;
-            height: 100vmin;
+            width: 90vmin;
+            height: 90vmin;
             display: grid;
             grid-template-rows: repeat(21, 1fr);
             grid-template-columns: repeat(21, 1fr);
-            outline: 3px blue;
+            outline: 4px rgb(223, 223, 223);
             outline-style: solid;
         }
 
         .snake {
-            background-color: blue;
+            background-color: rgb(223, 223, 223);
             border: .25vmin solid black;
         }
 
         .food {
-            background-color: red;
+            background-color:#E40027;
             border: .25vmin solid black;
+            border-radius: 50%;
         }
     </style>
 
+    <script src="app.js"></script>
     <script src="game.js" defer type="module"></script>
 </body>
 </html>

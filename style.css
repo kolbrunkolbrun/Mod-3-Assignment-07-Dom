@@ -1,0 +1,161 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: lores-9-wide-bold-alt-oaklan,sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  color: rgb(223, 223, 223);
+  font-size: 20rem;
+  cursor: pointer;
+  
+}
+
+
+
+
+
+
+
+body {
+  background-color: black;
+}
+
+button {
+  background-color: blue;
+  size: 3rem;
+}
+
+.enter-image {
+  size: 50%;
+}
+
+.modal {
+  position: fixed;
+  /*centers the content*/
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  /*the modal transitions in and out*/
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color:#E40027;
+  width: 1000px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*
+  border-bottom: 1px solid black;
+  */
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 0px 30px 70px 60px;
+  font-size: 6rem;
+  font-family: lores-12, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(223, 223, 223);
+  justify-content: center;
+}
+
+a:link {
+  color: rgb(223, 223, 223);
+}
+
+/* visited link */
+a:visited {
+  color: rgb(223, 223, 223);
+}
+
+/* mouse over link */
+a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* selected link */
+a:active {
+  color: #F8D034;
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  /*the overlay transitions in and out*/
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}

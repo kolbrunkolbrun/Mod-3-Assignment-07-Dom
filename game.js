@@ -12,7 +12,7 @@ const gameBoard = document.getElementById('game-board')
 function main(currentTime) {
     //if you lose the game the page refreshes
     if (gameOver) {
-        if (confirm('Loser! Press ok to restart.')) {
+        if (confirm('Oops! Now you are dead.')) {
             window.location = '/'
         }
         return
